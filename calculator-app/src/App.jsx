@@ -1,11 +1,10 @@
-import { useState } from 'react'
-import EvaluateExpression from './components/evaluation'
+import Calculator from "./components/calculator"
 
 function App() {
   return (
-    <>
-      <EvaluateExpression />
-    </>
+    <div className="min-h-screen flex items-center justify-center">
+      <Calculator />
+    </div>
   )
   
 }
