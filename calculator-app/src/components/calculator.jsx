@@ -31,7 +31,7 @@ export default function Calculator() {
           <button className='border p-4 text-2xl  font-semibold cursor-default bg-[#f4913e] border-[#858693]
           ' onClick={() => handleNumber("x")}>x</button>
           <button className='border p-4 text-2xl  font-semibold cursor-default
-          bg-[#e0e0e0] border-x-[#858693] border-t-[#858693]' onClick={() => handleNumber("4")}>4</button>
+          bg-[#e0e0e0] border-x-[#858693] border-t-[#858693]' onClick={() => handleNumber("4")}>4</button>  
           <button className='border p-4 text-2xl  font-semibold cursor-default
           bg-[#e0e0e0] border-b-[#858693]' onClick={() => handleNumber("5")}>5</button>
           <button className='border p-4 text-2xl  font-semibold cursor-default
