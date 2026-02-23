@@ -61,7 +61,7 @@ export default function WeatherInformation() {
         Weather like
       </button>
 
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className="text-red-500">{error}</p>}  
 
       {temperature !== null && (
         <p className="mt-4 items-center flex pl-16 text-2xl">Temperature: {temperature}°C</p>
