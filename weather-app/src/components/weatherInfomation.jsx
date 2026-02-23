@@ -18,7 +18,7 @@ export default function WeatherInformation() {
       // 1️⃣ Fetch coordinates from city name
       const geoResponse = await fetch(
         `https://geocoding-api.open-meteo.com/v1/search?name=${city}`
-      );
+      );  
 
       const geoData = await geoResponse.json();
 
@@ -26,7 +26,7 @@ export default function WeatherInformation() {
       if (!geoData.results) {
         setError("City not found");
         return;
-      }
+      }   
 
       const { latitude, longitude } = geoData.results[0];
 
