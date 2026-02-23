@@ -20,7 +20,7 @@ export default function WeatherInformation() {
         `https://geocoding-api.open-meteo.com/v1/search?name=${city}`
       );  
 
-      const geoData = await geoResponse.json();
+      const geoData = await geoResponse.json();  
 
       // If city not found
       if (!geoData.results) {
