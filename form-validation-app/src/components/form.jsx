@@ -3,13 +3,22 @@ import { useState } from "react"
 export default function Form() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [darkMode, setDarkMode] = useState(false)
 
 
   return (
+
     <div>
-      <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+      <div className={`min-h-screen flex items-center justify-center px-4
+  transition-colors duration-300 ease-in-out
+  ${darkMode ? "bg-gray-900" : "bg-gray-100"}`}>
+        <div className={`w-full max-w-md rounded-2xl shadow-lg p-8 
+  ${darkMode ? "bg-gray-800 text-white" : "bg-white text-black"} transition-colors duration-300 ease-in-out`}>
           <h2 className="text-2xl font-bold text-centre mb-6">Create Account</h2>
+
+          <button onClick={() => setDarkMode(!darkMode)} className="mb-4 px-2  rounded-2xl border">
+            {darkMode ? "Light Mode" : "Dark Mode"}
+          </button>
 
           <form className="space-y-7">
             {/* names  */}
@@ -20,7 +29,12 @@ export default function Form() {
               <input
                 type="text"
                 placeholder="Enter Full Names"
-                className="w-full border border-gray-300 rounded-2xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700 text-center"
+                className={`w-full rounded-2xl px-3 py-2 text-center
+  focus:outline-none focus:ring-2 focus:ring-blue-700
+  transition-colors duration-300 ease-in-out
+  ${darkMode
+                    ? "bg-gray-700 border border-gray-600 text-white"
+                    : "bg-white border border-gray-300 text-black"}`}
               />
             </div>
 
@@ -32,7 +46,12 @@ export default function Form() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full border border-gray-300 rounded-2xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-700 text-center"
+                className={`w-full rounded-2xl px-3 py-2 text-center
+  focus:outline-none focus:ring-2 focus:ring-blue-700
+  transition-colors duration-300 ease-in-out
+  ${darkMode
+                    ? "bg-gray-700 border border-gray-600 text-white"
+                    : "bg-white border border-gray-300 text-black"}`}
               />
             </div>
 
@@ -45,7 +64,12 @@ export default function Form() {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="********"
-                className="w-full border border-gray-300 rounded-2xl px-3 py-2 pr-16 focus:outline-none focus:ring-2 focus:ring-blue-700 text-center"
+                className={`w-full rounded-2xl px-3 py-2 pr-16 text-center
+  focus:outline-none focus:ring-2 focus:ring-blue-700
+  transition-colors duration-300 ease-in-out
+  ${darkMode
+                    ? "bg-gray-700 border border-gray-600 text-white"
+                    : "bg-white border border-gray-300 text-black"}`}
               />
 
               <button
@@ -66,9 +90,13 @@ export default function Form() {
               <input
                 type={showConfirmPassword ? "text" : "password"}
                 placeholder="********"
-                className="w-full border border-gray-300 rounded-2xl px-3 py-2 pr-16 focus:outline-none focus:ring-2 focus:ring-blue-700 text-center"
+                className={`w-full rounded-2xl px-3 py-2 pr-16 text-center
+  focus:outline-none focus:ring-2 focus:ring-blue-700
+  transition-colors duration-300 ease-in-out
+  ${darkMode
+                    ? "bg-gray-700 border border-gray-600 text-white"
+                    : "bg-white border border-gray-300 text-black"}`}
               />
-
               <button
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
